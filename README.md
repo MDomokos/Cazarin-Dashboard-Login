@@ -1,0 +1,1 @@
+A plain HTML and CSS version of the Cazarin.net login page
