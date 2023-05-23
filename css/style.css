@@ -1,0 +1,275 @@
+body {
+    font-family: "Poppins";
+    color:#2A3382;
+}
+
+.main {
+    max-width: 800px;
+}
+
+.notif-banner {
+    padding: 2px;
+    text-align: center;
+    background-color: #FCC92D;
+    border-radius: 20px;
+    margin: 16px;
+}
+
+.grid-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+}
+
+.column {
+    margin: 16px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.column.login {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.column.animation {
+    /* height: 500px; */
+    grid-row-end: span 2;
+}
+
+.column.navigation {
+    background-color: #ffffff00;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.column.footer {
+    background-color: rgba(255, 255, 255, 0);
+    /* padding: 8px; */
+    /* margin-top: 8px; */
+    text-align: center;
+}
+
+
+
+
+
+/* styling for user input form */
+
+legend,
+fieldset,
+select,
+textarea,
+input,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "Poppins";
+  background-color: #F5F5F9;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 2.5rem;
+  border-radius: 50px;
+  color:#2A3382;
+}
+
+
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+    font: 1.25rem / 1.5 sans-serif;
+    display: block;
+    box-sizing: border-box;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    height: 1.5em;
+    width: 1.5em;
+    vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #2A3382;
+}
+
+input[type="submit"] {
+    background-color: #FCC92D;
+    width: 100%;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.small-label {
+    display: inline-block;
+    font: lighter 0.8rem sans-serif;
+    margin-left: 0.5rem;
+}
+
+
+
+
+/* styling for the animated blobs */
+
+.animation-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    filter: blur(40px);
+    border-radius: 20px;
+}
+
+.blob-1 {
+    background: #2A3382;
+    height: 60VH;
+    width: 60vw;
+    border-radius: 20% 50% 50% 40%;
+    transform: rotate(20deg);
+    animation: blob_one 32s cubic-bezier(0.8,0.1,0.1,0.8) 1 both;
+    opacity: 1;
+    position: absolute; 
+    left: 2vw;
+    top: 2vh;
+}
+
+.blob-2 {
+    background: #FCC92D;
+    height: 25vh;
+    width: 30vh;
+    position: absolute; 
+    border-radius: 30% 50% 50% 70%;
+    right: 5vw;
+    top: 25vh;
+    animation: blob_two 32 cubic-bezier(0.8,0.1,0.1,0.8) 1 both;
+}
+
+.blob-3 {
+    background: #47BCF3;
+    height: 35vh;
+    width: 50vh;
+    position: absolute; 
+    border-radius: 30% 50% 50% 70%;
+    left: 20vw;
+    top: 25vh;
+    animation: blob_three 32s cubic-bezier(0.8,0.1,0.1,0.8) 1 both;
+}
+
+
+/* @keyframes transform
+{
+    0%,
+    100% {
+        border-radius: 33% 67% 70% 30% / 30% 40% 70% 70%;
+    }
+
+    20% {
+        border-radius: 37% 63% 51% 49% / 37% 35% 35% 63%;
+    }
+
+    40% {
+        border-radius: 36% 64% 64% 36% / 64% 48% 52% 26%;
+    }
+
+    60% {
+        border-radius: 37% 63% 51% 49% / 30% 30% 70% 73%;
+    }
+
+    80% {
+        border-radius: 40% 60% 42% 58% / 51% 51% 49% 59%;
+    }
+} */
+
+@keyframes blob_one
+{
+    0%,
+    100% {
+        transform: none;
+    }
+
+    33% {
+        transform: translate(20%, 3%) scale(0.9);
+    }
+
+    66% {
+        transform: translate(30%, 80%) scale(0.8);
+    }
+}
+
+@keyframes blob_two
+{ 
+    0%,
+    100% {
+        transform: rotate(20deg);
+    }
+
+    33% {
+        transform: rotate(20deg) translate(30%, 90%) scale(0.9);
+    }
+
+    66% {
+        transform: rotate(20deg) translate(-10%, -70%) scale(1.1);
+    }
+}
+
+@keyframes blob_three
+{ 
+    0%,
+    100% {
+        transform: rotate(115deg);
+    }
+
+    33% {
+        transform: rotate(115deg) translate(-90%, -50%) scale(0.9);
+    }
+
+    66% {
+        transform: rotate(115deg) translate(10%, 90%) scale(1.1);
+    }
+}
+
+
+
+
+
+
+
+/* styling for the three nevigation buttons */
+
+.nav-button {
+    background-color: white;
+    border-radius: 20px;
+    padding: 1rem;
+    transition: ease-in-out 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #47bdf32f;
+}
+
+.nav-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    width: 3rem;
+}
+
+.nav-text {
+    text-align: center;
+    margin: 0.5rem;
+}
