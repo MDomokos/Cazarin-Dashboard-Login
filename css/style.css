@@ -1,10 +1,8 @@
-body {
-    font-family: "Poppins";
-    color:#2A3382;
-}
 
-.main {
-    max-width: 800px;
+
+main {
+    max-width: 80rem;
+    margin: auto;
 }
 
 .notif-banner {
@@ -12,41 +10,47 @@ body {
     text-align: center;
     background-color: #FCC92D;
     border-radius: 20px;
-    margin: 16px;
+    margin-bottom: 1rem;
 }
 
 .grid-main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    /* height: 78vh; */
   }
 
 .grid-footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 3fr;
+    grid-template-columns: 1fr;
 }
 
 .column {
-    margin: 16px;
+    /* margin: 16px; */
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
 }
 
 .column.login {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
 }
 
 .column.animation {
-    /* height: 500px; */
-    grid-row-end: span 2;
+    position: relative;
+    height: 16rem;
 }
 
 .column.navigation {
     background-color: #ffffff00;
     display: grid;
-    gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    height: fit-content;
 }
 
 .column.footer {
@@ -54,7 +58,48 @@ body {
     /* padding: 8px; */
     /* margin-top: 8px; */
     text-align: center;
+    margin: -0.5rem;
 }
+
+
+
+
+
+/* adaptive layout styling */
+
+@media (min-width: 40em) {
+    .grid-footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .column.footer.four {
+        grid-column-end: span 3;
+    }
+}
+
+@media (min-width: 60em) {
+   
+    .grid-main {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    .column.animation {
+        height: auto;
+        grid-row-end: span 2;
+    }
+    
+    .grid-footer {
+        grid-template-columns: 1fr 1fr 1fr 3fr;
+    }
+    .column.footer {
+        margin: 16px;
+    }
+    .column.footer.four {
+        grid-column-end: auto;
+    }
+}
+
+
+
 
 
 
@@ -109,21 +154,61 @@ input[type="submit"] {
     width: 100%;
     font-weight: bolder;
     font-size: large;
+    transition: ease-in-out 0.5;
+}
+
+input[type="submit"]:hover {
+    background-color: #fcc82db6;
 }
 
 .small-label {
     display: inline-block;
     font: lighter 0.8rem sans-serif;
-    margin-left: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.small-label.checkbox {
+    margin-left: 0.01rem;
+}
+
+.small-label.forgot-password {
+    color: #2A3382;
+    text-decoration: none;
+    margin-right: 1.5rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.left-right-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 
 
 
-/* styling for the animated blobs */
+
+
+
+/* styling for the message banner on the right side */
+
+.massage-container {
+    position: absolute;
+    background-color: #be0000;
+    max-width: 30rem;
+    z-index: 1;
+}
+
+
+
+
+
+/* styling for the animated blobs on the right side*/
 
 .animation-container {
-    min-height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -253,7 +338,6 @@ input[type="submit"] {
 .nav-button {
     background-color: white;
     border-radius: 20px;
-    padding: 1rem;
     transition: ease-in-out 0.3s;
 }
 
@@ -265,11 +349,25 @@ input[type="submit"] {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0.5rem;
+    margin-top:1rem;
     width: 3rem;
 }
 
 .nav-text {
     text-align: center;
     margin: 0.5rem;
+}
+
+
+
+
+
+/* styling for the footer text */
+
+.column.footer:hover {
+    text-decoration: underline;
+}
+
+.column.footer.four:hover {
+    text-decoration: none;
 }

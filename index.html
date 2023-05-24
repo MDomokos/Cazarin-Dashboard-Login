@@ -8,18 +8,25 @@
         <meta name="author" content=""/> 
         <title>Cazarin Dashboard Login</title>         
         <link href="css/style.css" rel="stylesheet"/> 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
-    <body style="background-color:#F5F5F9;">
+    <style>
+        body    {background-color:#F5F5F9; font-family: "Poppins"; color:#2A3382;}
+        h1      {font-weight: 700; font-size: 2.8rem;}
+        p       {font-size: 0.8rem;}
+    </style>
+    <body>
         <main>
             <div class="notif-banner">
                 <p>Server maintenance from 2pm UTC-5 to 5:30pm. Your dashboard may be temporarity unavailable</p>
             </div>
             <div class="grid-main">
                 <div class="column login">
-                    <div>
-                        <H1>Welcome to eProject</H1>
-                        <H2>The sophisticated support system for your projects</H2>
+                    <div class="login-container">
+                        <h1>Welcome to eProject</h1>
+                        <h2>The sophisticated support system for your projects</h2>
                         <form>
                             <div class="login-input">
                                 <label for="username" class="small-label">username</label>
@@ -29,15 +36,26 @@
                                 <label for="password" class="small-label">password</label>
                                 <input type="password" id="password">
                             </div>
-                            <input type="checkbox" id="remember">
-                            <label for="remember" class="small-label">Remember me</label>
-
+                            <div class="left-right-container">
+                                <div>
+                                    <input type="checkbox" id="remember">
+                                    <label for="remember" class="small-label checkbox">Remember me</label>
+                                </div>
+                                <div>
+                                    <a href="url" class="small-label forgot-password">forgot password?</a>
+                                </div>
+                            </div>
                             <input type="submit" value="Sign In" />
-
                         </form>
                     </div>
                 </div>
                 <div class="column animation">
+                    <div class="massage-container">
+                        <h2>
+                            We have created this system to support you and give you the best communication possible.
+                        </h2>
+
+                    </div>
                     <div class="animation-container">
                         <div class="blob-1"></div>
                         <div class="blob-2"></div>
@@ -47,32 +65,32 @@
                 <div class="column navigation">
                     <div class="nav-button" onclick="location.href='https://webmail.cazarin.com/';" style="cursor: pointer;">
                         <img src="email.png" class="nav-image"/>
-                        <H3 class="nav-text">Access Webmail</H3>
+                        <h3 class="nav-text">Access Webmail</h3>
                     </div>
                     <div class="nav-button" onclick="location.href='https://www.cazarin.com/tech-support/';" style="cursor: pointer;">
                         <img src="client-support.png" class="nav-image"/>
-                        <H3 class="nav-text">Tech Support</H3>
+                        <h3 class="nav-text">Tech Support</h3>
                     </div>
                     <div class="nav-button" onclick="location.href='https://cazarin.net/view-tutorials.cfm';" style="cursor: pointer;">
                         <img src="film.png" class="nav-image"/>
-                        <H3 class="nav-text">Dashboard Training</H3>
+                        <h3 class="nav-text">Dashboard Training</h3>
                     </div>
                 </div>
             </div>
             <div class="grid-footer">
-                <div class="column footer one">
+                <div class="column footer one" onclick="location.href='https://cazarin.com/';" style="cursor: pointer;">
                     <p>
-                         Visit Us <b>www.cazarin.com </b>
+                         Visit Us <b>www.cazarin.com</b>
                     </p>
                 </div>
-                <div class="column footer two">
+                <div class="column footer two" onclick="location.href='tel:7634209992';" style="cursor: pointer;">
                     <p>
-                        Call Us <b>(763)&nbsp;420-9992 </b>               
+                        Call Us <b>(763)&nbsp;420-9992</b>               
                     </p>
                 </div>
-                <div class="column footer three">
+                <div class="column footer three" onclick="location.href='mailto:info@cazarin.com';" style="cursor: pointer;">
                     <p>
-                        Email Us <b>info@cazarin.com </b>               
+                        Email Us <b>info@cazarin.com</b>               
                     </p>
                 </div>
                 <div class="column footer four">
