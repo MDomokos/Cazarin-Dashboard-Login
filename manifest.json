@@ -1,6 +1,6 @@
 {
-	"name":"PWA Login",
-	"short_name":"PWA",
+	"name":"Cazarin Interactive",
+	"short_name":"Cazarin",
 	"start_url":"index.html",
 	"display":"standalone",
 	"background_color":"#F5F5F9",
