@@ -221,11 +221,11 @@ input[type="submit"]:hover {
 
 .message-background {
     color:#ffffff;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #2A3382;
-    width: 80%;
+    width: 50%;
     margin: auto;
-    padding: 1rem;
+    padding: 5rem;
 }
 
 .logo-image {
@@ -233,7 +233,7 @@ input[type="submit"]:hover {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
-    max-width: 40%;
+    max-width: 6rem;
 }
 
 /* styling for the animated blobs on the right side*/
