@@ -39,7 +39,7 @@ main {
     align-items: center;
     padding-left: 15%;
     padding-right: 15%;
-    height: 69vh;
+    /* height: 69vh; */
 }
 
 .column.animation {
@@ -179,7 +179,7 @@ input[type="submit"]:hover {
 
 .small-label {
     display: inline-block;
-    font: lighter 0.8rem sans-serif;
+    font: lighter 0.8rem;
     margin-left: 1.5rem;
 }
 
