@@ -10,7 +10,7 @@ main {
     /* padding-left: 1rem;
     padding-right: 1rem; */
     padding: 1rem;
-    height: 95vh;
+    height: calc(100vh - 2rem);
 }
 
 
@@ -28,34 +28,37 @@ main {
 .container-t:nth-child(9) { grid-area: t4; }
 
 
+
+/* grid layouts for all screen sizes */
+
 .grid-main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 9fr 1fr 1fr;
-    grid-column-gap: 14px;
-    grid-row-gap: 14px;
+    gap: 1rem;
     height: 100%;
+    min-height: 590px;
     grid-template-areas:
       "w1 w1 w1 w2 w2 w2"
       "w3 w4 w5 w2 w2 w2"
       "t1 t2 t3 t4 t4 t4";
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 840px) and (max-height: 700px) {
     .grid-main {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 9fr 1fr 1fr;
-        height: 100%;
         grid-template-areas:
-          "w1 w1 w1"
-          "w3 w4 w5"
-          "w2 w2 w2"
-          "t1 t2 t3"
-          "t4 t4 t4";
+            "w1 w1 w1"
+            "w3 w4 w5"
+            "w2 w2 w2"
+            "t1 t2 t3"
+            "t4 t4 t4";
     }
 }
 
-@media (max-height: 700px) {
+@media (max-height: 800px) {
     .grid-main {
         height: 100%;
         grid-template-areas:
@@ -69,23 +72,219 @@ main {
     .container-w:nth-child(4) {  }
 }
 
-@media (max-width: 768px) and (max-height: 700px) {
+@media (max-width: 768px) {
     .grid-main {
         grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 9fr 1fr 0.5fr;
+        height: 100%;
         grid-template-areas:
-            "w1 w1 w1"
-            "w3 w4 w5"
-            "w2 w2 w2"
-            "t1 t2 t3"
-            "t4 t4 t4";
+          "w1 w1 w1"
+          "w3 w4 w5"
+          "w2 w2 w2"
+          "t1 t2 t3"
+          "t4 t4 t4";
+    }
+
+    .container-login {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .container-message img {
+        display: none;
+    }
+
+    .container-message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
 
+
+
+
+
+/* styling for white squares in main grid */
 
 .container-w {
     border-radius: 20px;
     background-color: white;
 }
+
+
+
+
+
+
+/* styling for user input form */
+
+.container-w:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+}
+
+.container-login {
+    max-width: 22rem;
+    /* background-color: black; */
+}
+
+.welcome {
+    margin-top: -5%;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  legend,
+  fieldset,
+  select,
+  textarea,
+  input,
+  button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "Poppins";
+  background-color: #F5F5F9;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 2.5rem;
+  border-radius: 50px;
+  color:#2A3382;
+  }
+  
+  
+  input[type="password"],
+  input[type="email"],
+  select,
+  textarea {
+    font: 1.25rem / 1.5 sans-serif;
+    display: block;
+    box-sizing: border-box;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+  }
+  
+  input[type="password"]:focus,
+  input[type="email"]:focus,
+  select:focus,
+  textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #FCC92D;
+  }
+  
+  input[type="checkbox"] {
+    height: 1.5em;
+    width: 1.5em;
+    vertical-align: middle;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: #2A3382;
+  }
+  
+  input[type="submit"] {
+    background-color: #FCC92D;
+    width: 100%;
+    font-weight: bolder;
+    font-size: large;
+    transition: ease-in-out 0.5;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #fcc82db6;
+  }
+  
+  .small-label {
+    display: inline-block;
+    font: lighter 0.8rem;
+    margin-left: 1.5rem;
+  }
+  
+  .small-label.checkbox {
+    margin-left: 0.01rem;
+  }
+  
+  .small-label.forgot-password {
+    color: #2A3382;
+    text-decoration: none;
+    margin-right: 1.5rem;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .left-right-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+
+
+
+
+
+/* styling for animation side */
+
+.container-w:nth-child(2) {
+    position: relative;
+    overflow: hidden;
+    min-height: 20rem;
+}
+
+.container-message {
+    background-color: #2A3382;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    height: 25rem;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.container-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.container-message img {
+    max-width: 10rem;
+}
+
+.container-message h2 {
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+.container-animation img {
+    position: relative;
+    margin-top: -3px;
+    height: 100%;
+    object-fit: contain;
+}
+
+
 
 
 
@@ -128,8 +327,9 @@ main {
 /* sytling for footer grids */
 
 .container-t {
-    background-color: transparent;
-    border-radius: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
