@@ -81,6 +81,10 @@ main {
           "t4 t4 t4";
     }
 
+    main {
+        width: 100%;
+    }
+
     .container-login {
         margin-top: 2rem;
         margin-bottom: 2rem;
